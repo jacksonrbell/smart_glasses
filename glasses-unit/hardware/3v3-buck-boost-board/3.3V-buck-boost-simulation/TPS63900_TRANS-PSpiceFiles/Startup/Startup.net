@@ -1,0 +1,10 @@
+* source TPS63900_TRANS
+V_V1         N16776049 0 {VIN}
+R_RLOAD         VOUT 0  {{Vo1}/{ILOAD}} TC=0,0 
+X_L1         L1 L2 LDCR PARAMS:  L=2.2u  DCR=0.072 IC=0
+X_C7         VOUT 0 CESR PARAMS: C=22u ESR=4m IC={{Steady_State}*{Vo1}} X=1
+X_C8         ENABLE 0 CESR PARAMS: C=10u ESR=4m IC=1N X=1
+X_U1         ENABLE 0 L1 L2 0 ENABLE VOUT CFG1 CFG2 CFG3 0 TPS63900_TRANS
++  PARAMS: ICL={ICL} VO1={Vo1} VO2={Vo2} Steady_State={Steady_State}
+R_R1         N16776049 ENABLE  250m TC=0,0 
+.PARAM  vin=3.7 steady_state=0 icl=1 iload=100u vo1=3.3 vo2=3.3

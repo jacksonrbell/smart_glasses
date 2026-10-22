@@ -1,0 +1,368 @@
+
+**** 02/07/21 16:43:02 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "Startup-trans"  [ C:\Users\a0224109\Desktop\Yichen\Encypted\TPS63900_PSPICE_TRANS\tps63900_trans-pspicefiles\startup\tr
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "trans.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../TPS63900_trans.lib" 
+* From [PSPICE NETLIST] section of C:\Users\a0224109\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 3m 0 10n 
+.OPTIONS ADVCONV
+.OPTIONS ITL1= 1000
+.OPTIONS ITL2= 400
+.OPTIONS ITL4= 40
+.OPTIONS THREADS= 2
+.PROBE64 V(alias(*)) I(alias(*)) 
+.INC "..\Startup.net" 
+
+
+
+**** INCLUDING Startup.net ****
+* source TPS63900_TRANS
+V_V10         EN 0  
++PULSE 0 5 10u 10u 10u 10m 20m
+V_V1         VIN 0 {VIN}
+R_RLOAD         VOUT 0  {{Vo1}/{ILOAD}} TC=0,0 
+X_L1         L1 L2 LDCR PARAMS:  L=2.2u  DCR=0.072 IC=0
+X_C7         VOUT 0 CESR PARAMS: C=10u ESR=4m IC={{Steady_State}*{Vo1}} X=1
+X_C8         VIN 0 CESR PARAMS: C=10u ESR=4m IC=1N X=1
+X_U1         EN 0 L1 L2 0 VIN VOUT CFG1 CFG2 CFG3 0 TPS63900_TRANS PARAMS: ICL=
++ {ICL} VO1={Vo1} VO2={Vo2} Steady_State={Steady_State}
+.PARAM  vin=3 steady_state=0 icl=0 iload=100m vo1=1.8 vo2=1.8
+
+**** RESUMING trans.cir ****
+.END
+
+WARNING(ORPSIM-15223): Library file C:\Users\a0224109\Desktop\Yichen\Encypted\TPS63900_PSPICE_TRANS\TPS63900_trans.lib has changed since index file TPS63900_trans.ind was created.
+
+WARNING(ORPSIM-15227): The timestamp changed from Fri May  1 02:18:30 2020 to Sun Feb  7 16:42:50 2021.
+
+INFO(ORPSIM-15422): Making new index file TPS63900_trans.ind for library file TPS63900_trans.lib.
+
+Index has 18 entries from 1 file(s).
+
+
+ERROR(ORPSIM-15108): Subcircuit LDCR used by X_L1 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit CESR used by X_C7 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit CESR used by X_C8 is undefined
+
+
+ERROR(ORPSIM-15113): Model D_D1 used by X_U1.D_U1_D3 is undefined
+
+ERROR(ORPSIM-15113): Model D_D1 used by X_U1.D_U2_D7 is undefined
+
+ERROR(ORPSIM-15113): Model D_D1 used by X_U1.D_U2_D4 is undefined
+
+ERROR(ORPSIM-15113): Model D_D1 used by X_U1.D_U2_D5 is undefined
+
+ERROR(ORPSIM-15113): Model D_D1 used by X_U1.D_U2_D6 is undefined
+
+ERROR(ORPSIM-15113): Model D_D1 used by X_U1.D_D3 is undefined
+
+ERROR(ORPSIM-15113): Model D_D1 used by X_U1.D_U8_D7 is undefined
+
+ERROR(ORPSIM-15113): Model D_D1 used by X_U1.D_U8_D4 is undefined
+
+ERROR(ORPSIM-15113): Model D_D1 used by X_U1.D_U8_D5 is undefined
+
+ERROR(ORPSIM-15113): Model D_D1 used by X_U1.D_U8_D6 is undefined
+
+ERROR(ORPSIM-15113): Model D_D1 used by X_U1.D_D2 is undefined
+
+ERROR(ORPSIM-15113): Model D_D1 used by X_U1.D_D1 is undefined
+
+ERROR(ORPSIM-15113): Model D_D1 used by X_U1.D_D4 is undefined
+
+ERROR(ORPSIM-15113): Model D_D1 used by X_U1.D_U50_D2 is undefined
+
+ERROR(ORPSIM-15113): Model D_D1 used by X_U1.D_U50_D3 is undefined
+
+ERROR(ORPSIM-15113): Model D_D1 used by X_U1.D_U50_D1 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit SRLATCHRHP_BASIC_GEN used by X_U1.X_U1_U3 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COMPHYS_BASIC_GEN used by X_U1.X_U1_U1 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U1_U6 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit OSCILLATOR used by X_U1.X_U1_U4 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit AND2_BASIC_GEN used by X_U1.X_U1_U11 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit OR2_BASIC_GEN used by X_U1.X_U1_U7 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COMPHYS_BASIC_GEN used by X_U1.X_U1_U8 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U1_U10 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U2_U7 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U2_U13 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COMP_BASIC_GEN used by X_U1.X_U2_U8 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit ASYMMETRIC_DELAY used by X_U1.X_U2_U3 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit ASYMMETRIC_DELAY used by X_U1.X_U2_U10 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit ASYMMETRIC_DELAY used by X_U1.X_U2_U1 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U2_U9 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit ASYMMETRIC_DELAY used by X_U1.X_U2_U11 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit AND2_BASIC_GEN used by X_U1.X_U2_U2 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U2_U4 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COMP_BASIC_GEN used by X_U1.X_U2_U6 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit AND2_BASIC_GEN used by X_U1.X_U2_U12 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit SRLATCHRHP_BASIC_GEN used by X_U1.X_U11_U707 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U11_U727 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit OR2_BASIC_GEN used by X_U1.X_U11_U726 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit AND2_BASIC_GEN used by X_U1.X_U11_U685 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U11_U683 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U11_U729 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit OR2_BASIC_GEN used by X_U1.X_U11_U728 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit SRLATCHSHP_BASIC_GEN used by X_U1.X_U11_U716 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit AND3_BASIC_GEN used by X_U1.X_U11_U688 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit SRLATCHSHP_BASIC_GEN used by X_U1.X_U11_U708 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit ONE_SHOT used by X_U1.X_U11_U719 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U11_U725 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit SRLATCHRHP_BASIC_GEN used by X_U1.X_U11_U709 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U11_U682 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U11_U50 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U11_U721 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U11_U723 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit AND4_BASIC_GEN used by X_U1.X_U11_U730 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U11_U722 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit SRLATCHSHP_BASIC_GEN used by X_U1.X_U11_U718 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit SRLATCHSHP_BASIC_GEN used by X_U1.X_U11_U717 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U11_U681 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit AND2_BASIC_GEN used by X_U1.X_U11_U694 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U11_U680 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U11_U724 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit OR2_BASIC_GEN used by X_U1.X_U11_U720 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COMP_BASIC_GEN used by X_U1.X_U9 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit ASYMMETRIC_DELAY used by X_U1.X_U6 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit AND2_BASIC_GEN used by X_U1.X_U5 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit AND2_BASIC_GEN used by X_U1.X_U7 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit ASYMMETRIC_DELAY used by X_U1.X_U4 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U8_U7 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U8_U13 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit ASYMMETRIC_DELAY used by X_U1.X_U8_U3 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COMP_BASIC_GEN used by X_U1.X_U8_U8 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit ASYMMETRIC_DELAY used by X_U1.X_U8_U10 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit ASYMMETRIC_DELAY used by X_U1.X_U8_U1 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U8_U9 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit ASYMMETRIC_DELAY used by X_U1.X_U8_U11 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U8_U4 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit AND2_BASIC_GEN used by X_U1.X_U8_U2 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COMP_BASIC_GEN used by X_U1.X_U8_U6 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit AND2_BASIC_GEN used by X_U1.X_U8_U12 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit BUF_DELAY_BASIC_GEN used by X_U1.X_U13 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U10 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COMP_BASIC_GEN used by X_U1.X_U11 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COMP_BASIC_GEN used by X_U1.X_U12 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit AND2_BASIC_GEN used by X_U1.X_U3_U13 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit AND2_BASIC_GEN used by X_U1.X_U3_U12 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COMP_BASIC_GEN used by X_U1.X_U3_U5 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit AND2_BASIC_GEN used by X_U1.X_U3_U11 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit BUF_DELAY_BASIC_GEN used by X_U1.X_U3_U6 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COMP_BASIC_GEN used by X_U1.X_U3_U9 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit BUF_DELAY_BASIC_GEN used by X_U1.X_U3_U10 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit ASYMMETRIC_DELAY used by X_U1.X_U3_U1 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COMP_BASIC_GEN used by X_U1.X_U3_U7 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit BUF_DELAY_BASIC_GEN used by X_U1.X_U3_U8 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit OR2_BASIC_GEN used by X_U1.X_U3_U4 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit ASYMMETRIC_DELAY used by X_U1.X_U3_U2 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit ASYMMETRIC_DELAY used by X_U1.X_U3_U3 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit BUF_DELAY_BASIC_GEN used by X_U1.X_U15_U4 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit OR2_BASIC_GEN used by X_U1.X_U15_U5 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U15_U6 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COMP_BASIC_GEN used by X_U1.X_U15_U3 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COUNTER used by X_U1.X_U50_U58 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit BUF_DELAY_BASIC_GEN used by X_U1.X_U50_U61 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COUNTER used by X_U1.X_U50_U7 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COMP_BASIC_GEN used by X_U1.X_U50_U29 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U50_U66 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit ONE_SHOT used by X_U1.X_U50_U55 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit OR3_BASIC_GEN used by X_U1.X_U50_U23 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit AND2_BASIC_GEN used by X_U1.X_U50_U43 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit AND2_BASIC_GEN used by X_U1.X_U50_U49 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U50_U9 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U50_U18 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit AND3_BASIC_GEN used by X_U1.X_U50_U60 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U50_U37 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U50_U15 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COUNTER used by X_U1.X_U50_U16 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COMP_BASIC_GEN used by X_U1.X_U50_U2 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit ONE_SHOT used by X_U1.X_U50_U63 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COMP_BASIC_GEN used by X_U1.X_U50_U51 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U50_U39 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit ONE_SHOT used by X_U1.X_U50_U52 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COMP_BASIC_GEN used by X_U1.X_U50_U3 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U50_U38 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit AND2_BASIC_GEN used by X_U1.X_U50_U50 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COMP_BASIC_GEN used by X_U1.X_U50_U59 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COMP_BASIC_GEN used by X_U1.X_U50_U33 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_DELAY_BASIC_GEN used by X_U1.X_U50_U48 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit ONE_SHOT used by X_U1.X_U50_U24 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit AND2_BASIC_GEN used by X_U1.X_U50_U42 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit AND2_BASIC_GEN used by X_U1.X_U50_U46 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COMP_BASIC_GEN used by X_U1.X_U50_U4 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COUNTER used by X_U1.X_U50_U6 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U50_U65 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit AND2_BASIC_GEN used by X_U1.X_U50_U35 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit DFF_R used by X_U1.X_U50_U70 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit AND2_BASIC_GEN used by X_U1.X_U50_U14 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U50_U69 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COMP_BASIC_GEN used by X_U1.X_U50_U5 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit AND3_BASIC_GEN used by X_U1.X_U50_U57 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit OR2_BASIC_GEN used by X_U1.X_U50_U54 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit ONE_SHOT used by X_U1.X_U50_U64 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COMP_BASIC_GEN used by X_U1.X_U50_U28 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U50_U34 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit ONE_SHOT used by X_U1.X_U50_U62 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U50_U1 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit ONE_SHOT used by X_U1.X_U50_U56 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INV_BASIC_GEN used by X_U1.X_U693 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit AND2_BASIC_GEN used by X_U1.X_U691 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit SRLATCHRHP_BASIC_GEN used by X_U1.X_U689 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit COMPHYS_BASIC_GEN used by X_U1.X_U692 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit ASYMMETRIC_DELAY used by X_U1.X_U690 is undefined
+

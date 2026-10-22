@@ -1,0 +1,645 @@
+
+**** 10/16/26 12:43:34 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-trans"  [ C:\Users\jackb\Repos\smart_glasses\glasses-unit\hardware\oled-breakout-board\12V-boost-simulation\
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "trans.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../b140.lib" 
+.LIB "../../../tps61170_trans.lib" 
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5ms 0 10n 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.OPTIONS ABSTOL= 10n
+.OPTIONS ITL1= 1500
+.OPTIONS ITL2= 400
+.OPTIONS ITL4= 400
+.OPTIONS VNTOL= 10u
+.PROBE64 V(alias(*)) I(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source TPS61170_TRANS
+C_C1         N7388460 N158713  10u  
+L_L1         N158713 N159773  12u  
+R_R9         N159773 SW  100m  
+R_R3         N7360900 N7361086  18.7k  
+C_C3         0 N7360900  22n  
+R_R1         N7362254 VOUT  92k  
+R_R2         0 N7362254  10.5k  
+V_V1         N7390313 0 3.7
+C_C4         0 N7379923  22u  
+R_R8         N7379923 VOUT  2m  
+X_U1         N158713 N158713 N7361086 0 N7362254 SW 0 TPS61170_TRANS PARAMS:
++  D0=1 D1=1 D2=1 D3=1 D4=1 FAST_MODE=0
+R_R11         0 N7388460  1m  
+I_I1         VOUT 0 DC 10m AC 0 0
+D_D1         SW VOUT DI_B140 
+R_R12         N158713 N7390313  190m  
+
+**** RESUMING trans.cir ****
+.END
+
+**** 10/16/26 12:43:34 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-trans"  [ C:\Users\jackb\Repos\smart_glasses\glasses-unit\hardware\oled-breakout-board\12V-boost-simulation\
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               DI_B140         d_d1            
+          IS   39.600000E-06    1.000000E-15 
+           N    1.7              .1          
+          BV   40                            
+         IBV  500.000000E-06                 
+          RS     .0502           .05         
+          TT    7.200000E-09   10.000000E-12 
+         CJO  265.000000E-12                 
+           M     .333                        
+
+
+               X_U1.X_U7_U620.dd               X_U1.X_U5_U4.dd X_U1.X_U5_U2.dd 
+          IS    1.000000E-15                    1.000000E-15    1.000000E-15 
+           N     .01                             .01             .01         
+          TT   10.000000E-12                   10.000000E-12   10.000000E-12 
+
+
+**** 10/16/26 12:43:34 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-trans"  [ C:\Users\jackb\Repos\smart_glasses\glasses-unit\hardware\oled-breakout-board\12V-boost-simulation\
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.X_U1_S2._U1_S2 
+         RON    1            
+        ROFF   10.000000E+06 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U1.X_U1_S1._U1_S1 
+         RON    1            
+        ROFF   10.000000E+06 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U1.X_U1_S3._U1_S3 
+         RON    1            
+        ROFF   10.000000E+06 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U1.X_U6_S26._U6_S26 
+         RON     .01         
+        ROFF  100.000000E+06 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U1.X_U5_S2._U5_S2 
+         RON    1            
+        ROFF   10.000000E+06 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U1.X_U8_S30._U8_S30 
+         RON     .3          
+        ROFF   35.000000E+06 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U1.X_U4_S26._U4_S26 
+         RON     .01         
+        ROFF  100.000000E+06 
+         VON     .8          
+        VOFF     .2          
+
+
+WARNING(ORPSIM-16534): Using high values of ITL4 for Speed Level > 0 may increase total simulation job time.
+
+Starting pseudo-transient algorithm.
+
+INFO(ORPSIM-16594): To improve Pseudotransient Convergence and Performance, set following options to relax stabilization criteria for capacitor currents and inductor voltages: PTRANABSTOL=1e-5, PTRANVNTOL=1e-4
+
+ERROR -- Convergence problem in transient bias point calculation
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   SW)    0.0000  ( VOUT)    0.0000  (N158713)    0.0000                       
+
+(N159773)    0.0000                   (N7360900)    0.0000                      
+
+(N7361086)    0.0000                  (N7362254)    0.0000                      
+
+(N7379923)    0.0000                  (N7388460)    0.0000                      
+
+(N7390313)    0.0000                  (X_U1.ISW)    0.0000                      
+
+(X_U1.SDWN)    0.0000                 (X_U1.SET0)    0.0000                     
+
+(X_U1.SET1)    0.0000                 (X_U1.VREF)    0.0000                     
+
+(X_U1.U4_Q0)    0.0000                (X_U1.U4_Q1)    0.0000                    
+
+(X_U1.U4_Q2)    0.0000                (X_U1.U4_Q3)    0.0000                    
+
+(X_U1.U4_Q4)    0.0000                (X_U1.SYSCLK)    0.0000                   
+
+(X_U1.U1_OUT)    0.0000               (X_U1.U6_PWM)    0.0000                   
+
+(X_U1.PWM_CLK)    0.0000              (X_U1.U6_ISWF)    0.0000                  
+
+(X_U1.VRAMPIN)    0.0000              (X_U1.U6_ICTRL)    0.0000                 
+
+(X_U1.N16528816)    0.0000            (X_U1.N16557157)    0.0000                
+
+(X_U1.PWM_FINAL)    0.0000            (X_U1.U4_D0_NET)    0.0000                
+
+(X_U1.U4_D1_NET)    0.0000            (X_U1.U4_D2_NET)    0.0000                
+
+(X_U1.U4_D3_NET)    0.0000            (X_U1.U4_D4_NET)    0.0000                
+
+(X_U1.U4_Q0_BAR)    0.0000            (X_U1.U4_Q1_BAR)    0.0000                
+
+(X_U1.U4_Q1_PRE)    0.0000            (X_U1.U4_Q2_BAR)    0.0000                
+
+(X_U1.U4_Q2_PRE)    0.0000            (X_U1.U4_Q3_BAR)    0.0000                
+
+(X_U1.U4_Q3_PRE)    0.0000            (X_U1.U4_Q4_BAR)    0.0000                
+
+(X_U1.U4_Q4_PRE)    0.0000            (X_U1.U4_SDWN_N)    0.0000                
+
+(X_U1.U5_CLIMIT)    0.0000            (X_U1.VREF_FILT)    0.0000                
+
+(X_U1.COMP_CLAMP)    0.0000           (X_U1.CTRL_LOGIC)    0.0000               
+
+(X_U1.U6_DUTY93P)    0.0000           (X_U1.U1_N7335546)    0.0000              
+
+(X_U1.U4_DECIMAL1)    0.0000          (X_U1.U4_SYNC_CLK)    0.0000              
+
+(X_U1.U5_EA_CLAMP)    0.0000          (X_U1.U5_ENVELOPE)    0.0000              
+
+(X_U1.U5_N7411349)    0.0000          (X_U1.U5_N7411581)    0.0000              
+
+(X_U1.U5_N7417324)    0.0000          (X_U1.U8_DRVH_PRE)    0.0000              
+
+(X_U1.U8_N7375083)    0.0000          (X_U1.U8_N7375243)    0.0000              
+
+(X_U1.X_U4_U4.MY5)    0.0000          (X_U1.X_U4_U4.Qbr)    0.0000              
+
+(X_U1.X_U4_U4.Qqq)    0.0000          (X_U1.X_U4_U7.MY5)    0.0000              
+
+(X_U1.X_U4_U7.Qbr)    0.0000          (X_U1.X_U4_U7.Qqq)    0.0000              
+
+(X_U1.X_U4_U8.MY5)    0.0000          (X_U1.X_U4_U8.Qbr)    0.0000              
+
+(X_U1.X_U4_U8.Qqq)    0.0000          (X_U1.U1_N16498006)    0.0000             
+
+(X_U1.U1_N16498068)    0.0000         (X_U1.U1_N16498934)    0.0000             
+
+(X_U1.U1_N16499002)    0.0000         (X_U1.U1_N16499008)    0.0000             
+
+(X_U1.U1_N16508462)    0.0000         (X_U1.U1_N16508546)    0.0000             
+
+(X_U1.U1_N16510574)    0.0000         (X_U1.U1_N16521347)    0.0000             
+
+(X_U1.U1_N16525173)    0.0000         (X_U1.U3_N16541165)    0.0000             
+
+(X_U1.U3_N16541411)    0.0000         (X_U1.U4_N16779210)    0.0000             
+
+(X_U1.U4_N16779213)    0.0000         (X_U1.U4_N16779319)    0.0000             
+
+(X_U1.U4_N16779324)    0.0000         (X_U1.U4_N16779340)    0.0000             
+
+(X_U1.U4_N16779350)    0.0000         (X_U1.U4_N16779369)    0.0000             
+
+(X_U1.U4_N16779391)    0.0000         (X_U1.U4_N16779394)    0.0000             
+
+(X_U1.U4_N16779441)    0.0000         (X_U1.U4_N16779473)    0.0000             
+
+(X_U1.U4_N16779476)    0.0000         (X_U1.U4_N16779481)    0.0000             
+
+(X_U1.U4_N16779508)    0.0000         (X_U1.U4_N16779520)    0.0000             
+
+(X_U1.U4_N16779530)    0.0000         (X_U1.U4_N16779551)    0.0000             
+
+(X_U1.U4_N16779601)    0.0000         (X_U1.U4_N16779614)    0.0000             
+
+(X_U1.U4_N16779660)    0.0000         (X_U1.U4_N16779665)    0.0000             
+
+(X_U1.U4_N16779693)    0.0000         (X_U1.U4_N16779696)    0.0000             
+
+(X_U1.U4_N16779716)    0.0000         (X_U1.U4_N16779728)    0.0000             
+
+(X_U1.U4_N16779752)    0.0000         (X_U1.U4_N16779773)    0.0000             
+
+(X_U1.U4_N16779778)    0.0000         (X_U1.U4_N16779809)    0.0000             
+
+(X_U1.U4_N16779820)    0.0000         (X_U1.U4_N16779823)    0.0000             
+
+(X_U1.U4_N16779828)    0.0000         (X_U1.U4_N16779854)    0.0000             
+
+(X_U1.U4_N16779878)    0.0000         (X_U1.U4_N16779883)    0.0000             
+
+(X_U1.U4_N16779886)    0.0000         (X_U1.U4_N16779893)    0.0000             
+
+(X_U1.U4_N16779896)    0.0000         (X_U1.U4_N16779910)    0.0000             
+
+(X_U1.U4_N16779933)    0.0000         (X_U1.U4_N16779975)    0.0000             
+
+(X_U1.U4_N16779994)    0.0000         (X_U1.U4_N16779997)    0.0000             
+
+(X_U1.U4_N16780008)    0.0000         (X_U1.U4_N16780010)    0.0000             
+
+(X_U1.U4_N16780013)    0.0000         (X_U1.U4_N16780049)    0.0000             
+
+(X_U1.U4_N16780056)    0.0000         (X_U1.U4_N16780105)    0.0000             
+
+(X_U1.U4_N16780152)    0.0000         (X_U1.U4_N16780198)    0.0000             
+
+(X_U1.U4_N16780201)    0.0000         (X_U1.U4_N16780239)    0.0000             
+
+(X_U1.U4_N16780250)    0.0000         (X_U1.U4_N16780265)    0.0000             
+
+(X_U1.U4_N16780278)    0.0000         (X_U1.U4_N16780291)    0.0000             
+
+(X_U1.U4_N16780296)    0.0000         (X_U1.U4_N16780332)    0.0000             
+
+(X_U1.U4_N16780343)    0.0000         (X_U1.U4_N16780346)    0.0000             
+
+(X_U1.U4_N16780361)    0.0000         (X_U1.U4_N16780369)    0.0000             
+
+(X_U1.U4_N16780372)    0.0000         (X_U1.U4_N16780401)    0.0000             
+
+(X_U1.U4_N16780404)    0.0000         (X_U1.U4_N16780457)    0.0000             
+
+(X_U1.U4_N16780503)    0.0000         (X_U1.U4_N16780545)    0.0000             
+
+(X_U1.U4_N16780552)    0.0000         (X_U1.U4_N16780576)    0.0000             
+
+(X_U1.U4_N16780583)    0.0000         (X_U1.U4_N16780586)    0.0000             
+
+(X_U1.U4_N16780651)    0.0000         (X_U1.U4_N16780656)    0.0000             
+
+(X_U1.U4_N16780695)    0.0000         (X_U1.U4_N16780819)    0.0000             
+
+(X_U1.U4_N16780821)    0.0000         (X_U1.U4_N16780884)    0.0000             
+
+(X_U1.U4_N16780990)    0.0000         (X_U1.U4_N16781009)    0.0000             
+
+(X_U1.U4_N16781040)    0.0000         (X_U1.U4_N16781046)    0.0000             
+
+(X_U1.U4_N16781086)    0.0000         (X_U1.U4_N16781129)    0.0000             
+
+(X_U1.U4_N16781135)    0.0000         (X_U1.U4_N16781193)    0.0000             
+
+(X_U1.U4_N16790249)    0.0000         (X_U1.U4_N16790270)    0.0000             
+
+(X_U1.U4_N16790312)    0.0000         (X_U1.U4_N16790370)    0.0000             
+
+(X_U1.U4_N16844400)    0.0000         (X_U1.U4_N16845303)    0.0000             
+
+(X_U1.U4_TIMER_CLK)    0.0000         (X_U1.U5_N16591555)    0.0000             
+
+(X_U1.U5_N16591581)    0.0000         (X_U1.U5_N16591735)    0.0000             
+
+(X_U1.U5_N16596104)    0.0000         (X_U1.U5_N16598605)    0.0000             
+
+(X_U1.U5_N16599495)    0.0000         (X_U1.U5_N16599751)    0.0000             
+
+(X_U1.U5_N16600984)    0.0000         (X_U1.U5_N16608201)    0.0000             
+
+(X_U1.U5_N74225471)    0.0000         (X_U1.U6_N16489275)    0.0000             
+
+(X_U1.U6_N16489399)    0.0000         (X_U1.U6_N16543632)    0.0000             
+
+(X_U1.U6_N16555184)    0.0000         (X_U1.U6_N16571205)    0.0000             
+
+(X_U1.U6_N16573109)    0.0000         (X_U1.U6_N16573389)    0.0000             
+
+(X_U1.U7_N16489522)    0.0000         (X_U1.U7_N16497188)    0.0000             
+
+(X_U1.X_U1_U5.Yint)    0.0000         (X_U1.X_U3_U1.YINT)    0.0000             
+
+(X_U1.X_U3_U2.YINT)    0.0000         (X_U1.X_U4_U1.YINT)    0.0000             
+
+(X_U1.X_U4_U15.MY5)    0.0000         (X_U1.X_U4_U15.Qbr)    0.0000             
+
+(X_U1.X_U4_U15.Qqq)    0.0000         (X_U1.X_U4_U19.MY5)    0.0000             
+
+(X_U1.X_U4_U19.Qbr)    0.0000         (X_U1.X_U4_U19.Qqq)    0.0000             
+
+(X_U1.X_U4_U2.YINT)    0.0000         (X_U1.X_U4_U3.YINT)    0.0000             
+
+(X_U1.X_U4_U4.Qint)    0.0000         (X_U1.X_U4_U5.YINT)    0.0000             
+
+(X_U1.X_U4_U6.YINT)    0.0000         (X_U1.X_U4_U7.Qint)    0.0000             
+
+(X_U1.X_U4_U8.Qint)    0.0000         (X_U1.X_U4_U9.YINT)    0.0000             
+
+(X_U1.X_U5_U3.YINT)    0.0000         (X_U1.FAST_MODE_NET)    0.0000            
+
+(X_U1.U1_N164990381)    0.0000        (X_U1.U4_N167806880)    0.0000            
+
+(X_U1.U4_N167811400)    0.0000        (X_U1.U4_TIMER_RAMP)    0.0000            
+
+(X_U1.U7_INDELAYED1)    0.0000        (X_U1.X_U4_U10.YINT)    0.0000            
+
+(X_U1.X_U4_U11.YINT)    0.0000        (X_U1.X_U4_U12.YINT)    0.0000            
+
+(X_U1.X_U4_U13.YINT)    0.0000        (X_U1.X_U4_U15.Qint)    0.0000            
+
+(X_U1.X_U4_U16.YINT)    0.0000        (X_U1.X_U4_U17.YINT)    0.0000            
+
+(X_U1.X_U4_U18.YINT)    0.0000        (X_U1.X_U4_U19.Qint)    0.0000            
+
+(X_U1.X_U4_U20.YINT)    0.0000        (X_U1.X_U4_U21.YINT)    0.0000            
+
+(X_U1.X_U4_U22.YINT)    0.0000        (X_U1.X_U4_U23.YINT)    0.0000            
+
+(X_U1.X_U4_U24.YINT)    0.0000        (X_U1.X_U4_U25.YINT)    0.0000            
+
+(X_U1.X_U4_U26.YINT)    0.0000        (X_U1.X_U4_U27.YINT)    0.0000            
+
+(X_U1.X_U4_U28.YINT)    0.0000        (X_U1.X_U4_U29.YINT)    0.0000            
+
+(X_U1.X_U4_U30.YINT)    0.0000        (X_U1.X_U4_U31.YINT)    0.0000            
+
+(X_U1.X_U4_U32.YINT)    0.0000        (X_U1.X_U4_U4.Qqqd1)    0.0000            
+
+(X_U1.X_U4_U7.Qqqd1)    0.0000        (X_U1.X_U4_U8.Qqqd1)    0.0000            
+
+(X_U1.X_U6_U603.MY5)    0.0000        (X_U1.X_U6_U603.Qbr)    0.0000            
+
+(X_U1.X_U6_U603.Qqq)    0.0000        (X_U1.U1_CTRL_NOFILT)    0.0000           
+
+(X_U1.U4_SS_COMPLETE)    0.0000       (X_U1.X_U1_U601.YINT)    0.0000           
+
+(X_U1.X_U1_U604.YINT)    0.0000       (X_U1.X_U1_U605.YINT)    0.0000           
+
+(X_U1.X_U1_U606.YINT)    0.0000       (X_U1.X_U1_U607.YINT)    0.0000           
+
+(X_U1.X_U1_U608.YINT)    0.0000       (X_U1.X_U4_U131.Yint)    0.0000           
+
+(X_U1.X_U4_U135.YINT)    0.0000       (X_U1.X_U4_U136.YINT)    0.0000           
+
+(X_U1.X_U4_U137.YINT)    0.0000       (X_U1.X_U4_U15.Qqqd1)    0.0000           
+
+(X_U1.X_U4_U19.Qqqd1)    0.0000       (X_U1.X_U4_U4.CLKdel)    0.0000           
+
+(X_U1.X_U4_U4.CLKint)    0.0000       (X_U1.X_U4_U7.CLKdel)    0.0000           
+
+(X_U1.X_U4_U7.CLKint)    0.0000       (X_U1.X_U4_U8.CLKdel)    0.0000           
+
+(X_U1.X_U4_U8.CLKint)    0.0000       (X_U1.X_U6_U600.Yint)    0.0000           
+
+(X_U1.X_U6_U603.Qint)    0.0000       (X_U1.X_U6_U604.YINT)    0.0000           
+
+(X_U1.X_U6_U605.YINT)    0.0000       (X_U1.X_U6_U606.YINT)    0.0000           
+
+(X_U1.X_U7_U823.YINT)    0.0000       (X_U1.X_U7_U824.YINT)    0.0000           
+
+(X_U1.X_U8_U604.YINT)    0.0000       (X_U1.X_U8_U613.YINT)    0.0000           
+
+(X_U1.X_U4_U132.YINT1)    0.0000      (X_U1.X_U4_U132.YINT2)    0.0000          
+
+(X_U1.X_U4_U132.YINT3)    0.0000      (X_U1.X_U4_U133.YINT1)    0.0000          
+
+(X_U1.X_U4_U133.YINT2)    0.0000      (X_U1.X_U4_U133.YINT3)    0.0000          
+
+(X_U1.X_U4_U15.CLKdel)    0.0000      (X_U1.X_U4_U15.CLKint)    0.0000          
+
+(X_U1.X_U4_U19.CLKdel)    0.0000      (X_U1.X_U4_U19.CLKint)    0.0000          
+
+(X_U1.X_U4_U4.X2.YINT)    0.0000      (X_U1.X_U4_U7.X2.YINT)    0.0000          
+
+(X_U1.X_U4_U8.X2.YINT)    0.0000      (X_U1.X_U6_U603.Qqqd1)    0.0000          
+
+(X_U1.X_U7_U822.YINT1)    0.0000      (X_U1.X_U7_U822.YINT2)    0.0000          
+
+(X_U1.X_U7_U822.YINT3)    0.0000      (X_U1.U5_FAST_MODE_NET)    0.0000         
+
+(X_U1.X_U4_U15.X2.YINT)    0.0000     (X_U1.X_U4_U19.X2.YINT)    0.0000         
+
+(X_U1.X_U4_U4.X1.YINT1)    0.0000     (X_U1.X_U4_U4.X1.YINT2)    0.0000         
+
+(X_U1.X_U4_U4.X1.YINT3)    0.0000     (X_U1.X_U4_U4.X3.YINT1)    0.0000         
+
+(X_U1.X_U4_U4.X3.YINT2)    0.0000     (X_U1.X_U4_U4.X3.YINT3)    0.0000         
+
+(X_U1.X_U4_U7.X1.YINT1)    0.0000     (X_U1.X_U4_U7.X1.YINT2)    0.0000         
+
+(X_U1.X_U4_U7.X1.YINT3)    0.0000     (X_U1.X_U4_U7.X3.YINT1)    0.0000         
+
+(X_U1.X_U4_U7.X3.YINT2)    0.0000     (X_U1.X_U4_U7.X3.YINT3)    0.0000         
+
+(X_U1.X_U4_U8.X1.YINT1)    0.0000     (X_U1.X_U4_U8.X1.YINT2)    0.0000         
+
+(X_U1.X_U4_U8.X1.YINT3)    0.0000     (X_U1.X_U4_U8.X3.YINT1)    0.0000         
+
+(X_U1.X_U4_U8.X3.YINT2)    0.0000     (X_U1.X_U4_U8.X3.YINT3)    0.0000         
+
+(X_U1.X_U6_U603.CLKdel)    0.0000     (X_U1.X_U6_U603.CLKint)    0.0000         
+
+(X_U1.X_U4_U15.X1.YINT1)    0.0000    (X_U1.X_U4_U15.X1.YINT2)    0.0000        
+
+(X_U1.X_U4_U15.X1.YINT3)    0.0000    (X_U1.X_U4_U15.X3.YINT1)    0.0000        
+
+(X_U1.X_U4_U15.X3.YINT2)    0.0000    (X_U1.X_U4_U15.X3.YINT3)    0.0000        
+
+(X_U1.X_U4_U19.X1.YINT1)    0.0000    (X_U1.X_U4_U19.X1.YINT2)    0.0000        
+
+(X_U1.X_U4_U19.X1.YINT3)    0.0000    (X_U1.X_U4_U19.X3.YINT1)    0.0000        
+
+(X_U1.X_U4_U19.X3.YINT2)    0.0000    (X_U1.X_U4_U19.X3.YINT3)    0.0000        
+
+(X_U1.X_U6_U603.X2.YINT)    0.0000    (X_U1.X_U6_U603.X1.YINT1)    0.0000       
+
+(X_U1.X_U6_U603.X1.YINT2)    0.0000   (X_U1.X_U6_U603.X1.YINT3)    0.0000       
+
+(X_U1.X_U6_U603.X3.YINT1)    0.0000   (X_U1.X_U6_U603.X3.YINT2)    0.0000       
+
+(X_U1.X_U6_U603.X3.YINT3)    0.0000   
+
+
+  These voltages failed to converge:
+
+    V(N158713)                =     3.698V  \         0V
+    V(N159773)                =     3.698V  \         0V
+    V(SW)                     =     3.697V  \         0V
+    V(N7360900)               =    904.61V  \         0V
+    V(N7361086)               =    904.61V  \         0V
+    V(N7362254)               =   377.72mV  \         0V
+    V(VOUT)                   =     3.693V  \         0V
+    V(N7390313)               =     3.700V  \         0V
+    V(N7379923)               =     3.693V  \         0V
+    V(X_U1.FAST_MODE_NET)     =     1.000V  \         0V
+    V(X_U1.U1_N16499002)      =    -2.270V  \         0V
+    V(X_U1.U1_N16499008)      =    -2.270V  \         0V
+    V(X_U1.U1_OUT)            =     32.43V  \         0V
+    V(X_U1.U1_N164990381)     =   -32.43uV  \         0V
+    V(X_U1.U1_N16498934)      =   -32.43uV  \         0V
+    V(X_U1.SET1)              =     1.000V  \         0V
+    V(X_U1.U6_ICTRL)          =   -215.20V  \         0V
+    V(X_U1.COMP_CLAMP)        =    904.69V  \         0V
+    V(X_U1.VRAMPIN)           =    1.120KV  \         0V
+    V(X_U1.U6_N16573109)      =    11.20uV  \         0V
+    V(X_U1.U6_N16573389)      =     1.000V  \         0V
+    V(X_U1.U6_N16571205)      =     1.000V  \         0V
+    V(X_U1.U6_ISWF)           =   500.00mV  \         0V
+    V(X_U1.U5_N7417324)       =    943.61V  \         0V
+    V(X_U1.U5_EA_CLAMP)       =    944.17V  \         0V
+    V(X_U1.U5_N16591735)      =     1.000V  \         0V
+    V(X_U1.U5_N16591555)      =     1.000V  \         0V
+    V(X_U1.U5_N16608201)      =     5.300V  \         0V
+    V(X_U1.U5_N7411581)       =   265.00mV  \         0V
+    V(X_U1.U5_ENVELOPE)       =    943.61V  \         0V
+    V(X_U1.U5_N16599495)      =   176.28MV  \         0V
+    V(X_U1.U5_N16600984)      =    1.120KV  \         0V
+    V(X_U1.U5_N16599751)      =   176.28MV  \         0V
+    V(X_U1.U5_N16596104)      =    39.48MV  \         0V
+    V(X_U1.U5_N16591581)      =     1.000V  \         0V
+    V(X_U1.U5_N74225471)      =    944.17V  \         0V
+    V(X_U1.U5_CLIMIT)         =   560.20mV  \         0V
+    V(X_U1.U5_N16598605)      =    39.48MV  \         0V
+    V(X_U1.U5_N7411349)       =   265.00mV  \         0V
+    V(X_U1.U4_N16781086)      =     1.000V  \         0V
+    V(X_U1.U4_N16790270)      =     2.500V  \         0V
+    V(X_U1.U4_N16781129)      =     1.000V  \         0V
+    V(X_U1.U4_N16780884)      =     1.000V  \         0V
+    V(X_U1.U4_N16781009)      =     1.000V  \         0V
+    V(X_U1.U4_N16790370)      =     5.000V  \         0V
+    V(X_U1.U4_TIMER_RAMP)     =    1.175MV  \         0V
+    V(X_U1.U4_N16781040)      =     1.000V  \         0V
+    V(X_U1.X_U1_U605.YINT)    =     1.000V  \         0V
+    V(X_U1.U1_N16498006)      =     1.000V  \         0V
+    V(X_U1.X_U1_U5.Yint)      =     32.43V  \         0V
+    V(X_U1.X_U1_U607.YINT)    =     1.000V  \         0V
+    V(X_U1.U1_N16510574)      =     1.000V  \         0V
+    V(X_U1.X_U1_U604.YINT)    =     1.000V  \         0V
+    V(X_U1.U1_N16498068)      =     1.000V  \         0V
+    V(X_U1.X_U7_U822.YINT3)   =     1.000V  \         0V
+    V(X_U1.U7_N16497188)      =     1.000V  \         0V
+    V(X_U1.U3_N16541411)      =     1.000V  \         0V
+    V(X_U1.X_U3_U2.YINT)      =     1.000V  \         0V
+    V(X_U1.X_U6_U605.YINT)    =     1.000V  \         0V
+    V(X_U1.X_U6_U603.Qint)    =   -10.00mV  \         0V
+    V(X_U1.X_U6_U603.MY5)     =     5.000V  \         0V
+    V(X_U1.X_U6_U603.Qqq)     =   -10.00mV  \         0V
+    V(X_U1.X_U6_U603.Qbr)     =     1.000V  \         0V
+    V(X_U1.N16528816)         =     1.000V  \         0V
+    V(X_U1.U6_N16555184)      =  -500.00KV  \         0V
+    V(X_U1.X_U6_U600.Yint)    =  -500.00KV  \         0V
+    V(X_U1.X_U6_U606.YINT)    =     1.000V  \         0V
+    V(X_U1.U6_N16543632)      =     1.000V  \         0V
+    V(X_U1.X_U5_U3.YINT)      =     1.000V  \         0V
+    V(X_U1.U8_N7375083)       =     1.000V  \         0V
+    V(X_U1.X_U8_U613.YINT)    =     1.000V  \         0V
+    V(X_U1.X_U4_U135.YINT)    =     1.000V  \         0V
+    V(X_U1.U4_SDWN_N)         =     1.000V  \         0V
+    V(X_U1.X_U4_U15.Qint)     =   -10.00mV  \         0V
+    V(X_U1.X_U4_U15.MY5)      =     5.000V  \         0V
+    V(X_U1.X_U4_U15.Qqq)      =   -10.00mV  \         0V
+    V(X_U1.X_U4_U15.Qbr)      =     1.000V  \         0V
+    V(X_U1.U4_Q3_BAR)         =     1.000V  \         0V
+    V(X_U1.U4_Q1_BAR)         =     1.000V  \         0V
+    V(X_U1.U4_N16845303)      =     1.000V  \         0V
+    V(X_U1.U4_N16790249)      =     1.000V  \         0V
+    V(X_U1.U4_N16790312)      =     1.000V  \         0V
+    V(X_U1.X_U4_U132.YINT3)   =     1.000V  \         0V
+    V(X_U1.U4_TIMER_CLK)      =   -2.500MV  \         0V
+    V(X_U1.X_U4_U133.YINT3)   =     1.000V  \         0V
+    V(X_U1.X_U4_U19.Qint)     =   -10.00mV  \         0V
+    V(X_U1.X_U4_U19.MY5)      =     5.000V  \         0V
+    V(X_U1.X_U4_U19.Qqq)      =   -10.00mV  \         0V
+    V(X_U1.X_U4_U19.Qbr)      =     1.000V  \         0V
+    V(X_U1.U4_Q4_BAR)         =     1.000V  \         0V
+    V(X_U1.U4_Q2_BAR)         =     1.000V  \         0V
+    V(X_U1.U4_Q0_BAR)         =     1.000V  \         0V
+    V(X_U1.U4_N16781135)      =     1.000V  \         0V
+    V(X_U1.X_U4_U131.Yint)    =   -2.500MV  \         0V
+    V(X_U1.X_U4_U4.Qint)      =   -10.00mV  \         0V
+    V(X_U1.X_U4_U4.MY5)       =     5.000V  \         0V
+    V(X_U1.X_U4_U4.Qqq)       =   -10.00mV  \         0V
+    V(X_U1.X_U4_U4.Qbr)       =     1.000V  \         0V
+    V(X_U1.X_U4_U7.Qint)      =   -10.00mV  \         0V
+    V(X_U1.X_U4_U7.MY5)       =     5.000V  \         0V
+    V(X_U1.X_U4_U7.Qqq)       =   -10.00mV  \         0V
+    V(X_U1.X_U4_U7.Qbr)       =     1.000V  \         0V
+    V(X_U1.X_U4_U8.Qint)      =   -10.00mV  \         0V
+    V(X_U1.X_U4_U8.MY5)       =     5.000V  \         0V
+    V(X_U1.X_U4_U8.Qqq)       =   -10.00mV  \         0V
+    V(X_U1.X_U4_U8.Qbr)       =     1.000V  \         0V
+    V(X_U1.X_U4_U136.YINT)    =     1.000V  \         0V
+    V(X_U1.X_U4_U22.YINT)     =     1.000V  \         0V
+    V(X_U1.X_U6_U603.X1.YINT3) =     1.000V  \         0V
+    V(X_U1.X_U6_U603.CLKdel)  =     1.000V  \         0V
+    V(X_U1.X_U4_U15.X1.YINT3) =     1.000V  \         0V
+    V(X_U1.X_U4_U15.CLKdel)   =     1.000V  \         0V
+    V(X_U1.X_U4_U19.X1.YINT3) =     1.000V  \         0V
+    V(X_U1.X_U4_U19.CLKdel)   =     1.000V  \         0V
+    V(X_U1.X_U4_U4.X1.YINT3)  =     1.000V  \         0V
+    V(X_U1.X_U4_U4.CLKdel)    =     1.000V  \         0V
+    V(X_U1.X_U4_U7.X1.YINT3)  =     1.000V  \         0V
+    V(X_U1.X_U4_U7.CLKdel)    =     1.000V  \         0V
+    V(X_U1.X_U4_U8.X1.YINT3)  =     1.000V  \         0V
+    V(X_U1.X_U4_U8.CLKdel)    =     1.000V  \         0V
+
+  These supply currents failed to converge:
+
+    I(L_L1)                   =    10.04mA  \         0A
+    I(V_V1)                   =   -10.04mA  \         0A
+    I(X_U1.V_U4_V45)          =   -11.75mA  \         0A
+    I(X_U1.X_U8_H1.VH_U8_H1)  =   105.64nA  \         0A
+
+  These devices failed to converge:
+    D_D1      X_U1.D_U5_D3 X_U1.D_U4_D2 X_U1.X_U5_U4.d1 X_U1.X_U5_U2.d1 
+    X_U1.E_U1_ABM173 X_U1.E_U6_ABM165 X_U1.E_U5_ABM2 X_U1.E_U4_ABM67 
+    X_U1.E_U4_ABM64 X_U1.E_U4_ABM63 X_U1.E_U4_ABM66 X_U1.E_U4_ABM65 
+    X_U1.X_U1_U605.E_ABMGATE X_U1.X_U1_U5.E_ABM X_U1.X_U1_U601.E_ABMGATE 
+    X_U1.X_U6_U600.E_ABM X_U1.X_U4_U137.E_ABMGATE X_U1.X_U4_U132.E_ABMGATE1 
+    X_U1.X_U4_U131.E_ABM X_U1.G_U5_ABM2I1 X_U1.G_U4_ABMII1 X_U1.X_U4_U15.GQ 
+    X_U1.X_U4_U19.GQ X_U1.X_U4_U4.GQ X_U1.X_U4_U7.GQ X_U1.X_U4_U8.GQ 
+
+**** Interrupt ****

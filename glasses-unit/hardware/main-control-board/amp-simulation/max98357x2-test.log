@@ -1,0 +1,46 @@
+LTspice 26.0.1 for Windows
+Circuit: C:\Users\jackb\Repos\smart_glasses\glasses-unit\hardware\main-control-board\amp-simulation\max98357x2-test.net
+Start Time: Wed Oct 14 23:08:06 2026
+
+.step vbat=3
+solver = Normal
+Maximum thread count: 22
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration succeeded in finding operating point.
+
+.step vbat=3.7
+Direct Newton iteration succeeded in finding operating point.
+
+.step vbat=4.2
+Direct Newton iteration succeeded in finding operating point.
+Total elapsed time: 2.543 seconds.
+
+Files loaded:
+C:\Users\jackb\Repos\smart_glasses\glasses-unit\hardware\main-control-board\amp-simulation\max98357x2-test.net
+
+
+Measurement: ibat_avg
+  step	AVG(I(B_BAT))	FROM	TO
+     1	0.0664846028739	0	1.4
+     2	0.0604382118677	0	1.4
+     3	0.0552974245216	0	1.4
+
+Measurement: ibat_pk
+  step	MAX(I(B_BAT))	FROM	TO
+     1	0.722656786442	0	1.4
+     2	0.91279810667	0	1.4
+     3	1.04883408546	0	1.4
+
+Measurement: ploadl_avg
+  step	AVG(V(outL)*V(outL)/{RLOAD})	FROM	TO
+     1	0.07940349732	0	1.4
+     2	0.0886047374789	0	1.4
+     3	0.0915383782343	0	1.4
+
+Measurement: vbat_min
+  step	MIN(V(bat))	FROM	TO
+     1	2.89161801338	0	1.4
+     2	3.56310153008	0	1.4
+     3	4.04272651672	0	1.4

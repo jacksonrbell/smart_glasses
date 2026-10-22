@@ -1,0 +1,28 @@
+** Profile: "SCHEMATIC1-trans"  [ C:\Users\jackb\Repos\smart_glasses\glasses-unit\hardware\oled-breakout-board\12V-boost-simulation\tps61170_trans-pspicefiles\schematic1\trans.sim ] 
+
+** Creating circuit file "trans.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../b140.lib" 
+.LIB "../../../tps61170_trans.lib" 
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5ms 0 10n 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.OPTIONS ABSTOL= 10n
+.OPTIONS ITL1= 1500
+.OPTIONS ITL2= 400
+.OPTIONS ITL4= 400
+.OPTIONS VNTOL= 10u
+.PROBE64 V(alias(*)) I(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

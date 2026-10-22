@@ -1,0 +1,26 @@
+** Profile: "Startup-trans"  [ C:\Users\jackb\Repos\smart_glasses\glasses-unit\hardware\oled-breakout-board\3.3V-buck-boost-simulation\tps63900_trans-pspicefiles\startup\trans.sim ] 
+
+** Creating circuit file "trans.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../tps63900_trans.lib" 
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 3m 0 10n 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.OPTIONS ITL1= 1000
+.OPTIONS ITL2= 400
+.OPTIONS ITL4= 40
+.OPTIONS THREADS= 2
+.PROBE64 V(alias(*)) I(alias(*)) 
+.INC "..\Startup.net" 
+
+
+.END

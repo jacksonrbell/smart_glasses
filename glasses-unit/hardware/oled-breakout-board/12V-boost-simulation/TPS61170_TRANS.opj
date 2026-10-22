@@ -1,0 +1,108 @@
+(ExpressProject "TPS61170_TRANS"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "23.1-2024 S001-[10/16/26]")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File ".\tps61170_trans.olb"
+        (Type "Schematic Library")))
+    (NoModify)
+    (File ".\tps61170_trans.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420"))
+  (Folder "Layout")
+  (Folder "Outputs"
+    (File ".\tps61170_trans-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\tps61170_trans-pspicefiles\schematic1\trans.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\tps61170_trans-pspicefiles\schematic1\trans.sim"
+        (DisplayName "SCHEMATIC1-trans")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User)
+      (File ".\b140.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\b140.lib"))
+      (File ".\tps61170_trans.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\tps61170_trans.lib")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (Dbreak
+      (FullPartName "Dbreak.Normal")
+      (LibraryName
+         "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (ISRC
+      (FullPartName "ISRC.Normal")
+      (LibraryName
+         "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (TPS61170_TRANS
+      (FullPartName "TPS61170_TRANS.Normal")
+      (LibraryName
+         "C:\ELAB_MODEL_WS\ELAB_MODEL_DS\PART_NUMBERS\TPS61170\RELEASE_TI\PSPICE\TPS61170_PSPICE_TRANS\TPS61170_TRANS.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (D_D
+      (FullPartName "D_D.Normal")
+      (LibraryName
+         "C:\PSPICE_SUBBLK_LIB_WS\PSPICE_SUBBLK_LIB_DS\PSPICE_SUBBLK_LIB\SB02_SUBBLOCKBASIC\SB0204_DIODES\DIODES.OLB")
+      (DeviceIndex "0"))
+    (D_D1
+      (FullPartName "D_D1.Normal")
+      (LibraryName
+         "C:\PSPICE_SUBBLK_LIB_WS\PSPICE_SUBBLK_LIB_DS\PSPICE_SUBBLK_LIB\SB02_SUBBLOCKBASIC\SB0204_DIODES\DIODES.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\Users\jackb\Repos\smart_glasses\glasses-unit\hardware\oled-breakout-board\12V-boost-simulation\tps61170_trans.dsn")
+      (Path "Design Resources"
+         "C:\Users\jackb\Repos\smart_glasses\glasses-unit\hardware\oled-breakout-board\12V-boost-simulation\tps61170_trans.dsn"
+         "SCHEMATIC1")
+      (Path "Outputs")
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Model Libraries")
+      (Select "PSpice Resources" "Model Libraries"
+         "C:\Users\jackb\Repos\smart_glasses\glasses-unit\hardware\oled-breakout-board\12V-boost-simulation\b140.lib"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 0 0 0 200 0 682"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 5 24 5 1290 24 546")
+        (Scroll "147 20")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\JACKB\REPOS\SMART_GLASSES\GLASSES-UNIT\HARDWARE\OLED-BREAKOUT-BOARD\12V-BOOST-SIMULATION\TPS61170_TRANS.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1")))
+  (MPSSessionName "jackb")
+  (Folder "Logs"))

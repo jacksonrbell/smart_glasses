@@ -1,0 +1,100 @@
+
+**** 09/30/26 22:17:41 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "Startup-trans"  [ C:\Users\jackb\Repos\smart_glasses\glasses-unit\hardware\oled-breakout-board\3.3V-buck-boost-simulati
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "trans.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../tps63900_trans.lib" 
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 3m 0 10n 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.OPTIONS ITL1= 1000
+.OPTIONS ITL2= 400
+.OPTIONS ITL4= 40
+.OPTIONS THREADS= 2
+.PROBE64 V(alias(*)) I(alias(*)) 
+.INC "..\Startup.net" 
+
+
+
+**** INCLUDING Startup.net ****
+* source TPS63900_TRANS
+V_V1         N16776049 0 {VIN}
+R_RLOAD         VOUT 0  {{Vo1}/{ILOAD}} TC=0,0 
+X_L1         L1 L2 LDCR PARAMS:  L=2.2u  DCR=0.072 IC=0
+X_C7         VOUT 0 CESR PARAMS: C=22u ESR=4m IC={{Steady_State}*{Vo1}} X=1
+X_C8         ENABLE 0 CESR PARAMS: C=10u ESR=4m IC=1N X=1
+X_U1         ENABLE 0 L1 L2 0 ENABLE VOUT CFG1 CFG2 CFG3 0 TPS63900_TRANS
++  PARAMS: ICL={ICL} VO1={Vo1} VO2={Vo2} Steady_State={Steady_State}
+R_R1         N16776049 ENABLE  250m TC=0,0 
+.PARAM  vin=3.7 steady_state=0 icl=1 iload=100u vo1=3.3 vo2=3.3
+
+**** RESUMING trans.cir ****
+.END
+
+**** 09/30/26 22:17:41 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "Startup-trans"  [ C:\Users\jackb\Repos\smart_glasses\glasses-unit\hardware\oled-breakout-board\3.3V-buck-boost-simulati
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   L1) 86.73E-12  (   L2) 8.673E-21  ( VOUT)    0.0000  (ENABLE)     .0867     
+
+(N16776049)    3.7000                 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.445E+01
+
+    TOTAL POWER DISSIPATION   5.35E+01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 09/30/26 22:17:41 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "Startup-trans"  [ C:\Users\jackb\Repos\smart_glasses\glasses-unit\hardware\oled-breakout-board\3.3V-buck-boost-simulati
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =      632.52
+

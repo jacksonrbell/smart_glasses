@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "glasses-kicad-footprints") (type "KiCad") (uri "C:/Users/jackb/Repos/smart_glasses/glasses-unit/hardware/glasses-kicad-footprints.pretty") (options "") (descr ""))
+)

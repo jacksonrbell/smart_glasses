@@ -1,0 +1,26 @@
+LTspice 26.0.1 for Windows
+Circuit: C:\Users\jackb\Repos\smart_glasses\glasses-unit\hardware\main-control-board\amp-simulation\raw-vs-compressed.net
+Start Time: Wed Oct 14 23:21:00 2026
+solver = Normal
+Maximum thread count: 22
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration succeeded in finding operating point.
+Total elapsed time: 1.322 seconds.
+
+Files loaded:
+C:\Users\jackb\Repos\smart_glasses\glasses-unit\hardware\main-control-board\amp-simulation\raw-vs-compressed.net
+
+iavg_raw: AVG(I(B_IR))=0.0183362291836 FROM 0 TO 1.4
+iavg_comp: AVG(I(B_IC))=0.0604616906527 FROM 0 TO 1.4
+ipk_raw: MAX(I(B_IR))=0.911997795105 FROM 0 TO 1.4
+ipk_comp: MAX(I(B_IC))=0.912000000477 FROM 0 TO 1.4
+pch_raw: AVG(V(pR))=0.0217971945038 FROM 0 TO 1.4
+pch_comp: AVG(V(pC))=0.0888931235547 FROM 0 TO 1.4
+vrms_raw: RMS(V(outR))=0.417212855468 FROM 0 TO 1.4
+vrms_comp: RMS(V(outC))=0.84211348135 FROM 0 TO 1.4
+vpk_raw: MAX(abs(V(outR)))=3.3732047081 FROM 0 TO 1.4
+vpk_comp: MAX(abs(V(outC)))=3.37321257591 FROM 0 TO 1.4
+clip_raw: AVG(V(clipR))=0.00108144866517 FROM 0 TO 1.4
+clip_comp: AVG(V(clipC))=0.010735190682 FROM 0 TO 1.4

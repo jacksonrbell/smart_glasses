@@ -1,0 +1,300 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("VDC")
+        ("R")
+        ("LDCR_0")
+        ("CESR")
+        ("TPS63900DSK_TRANS")
+        ("Param")
+    )
+    ("instances"
+        ("V1"
+            ("device_name"	"VDC")
+            ("pspice_path"	"V_V1")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"{VIN}")
+                    ("pspice_param"	"DC")
+                )
+                ("BiasValue Power"
+                    ("value"	"-53.48W")
+                    ("pspice_param"	"BiasValue Power")
+                )
+            )
+        )
+        ("RLOAD"
+            ("device_name"	"R")
+            ("pspice_path"	"R_RLOAD")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"{{Vo1}/{ILOAD}}")
+                    ("pspice_param"	"VALUE")
+                )
+                ("BiasValue Power"
+                    ("value"	"0W")
+                    ("pspice_param"	"BiasValue Power")
+                )
+                ("TC2"
+                    ("value"	"0")
+                    ("pspice_param"	"TC2")
+                )
+                ("TC1"
+                    ("value"	"0")
+                    ("pspice_param"	"TC1")
+                )
+                ("POWER"
+                    ("value"	"RMAX")
+                    ("pspice_param"	"POWER")
+                )
+                ("MAX_TEMP"
+                    ("value"	"RTMAX")
+                    ("pspice_param"	"MAX_TEMP")
+                )
+                ("SLOPE"
+                    ("value"	"RSMAX")
+                    ("pspice_param"	"SLOPE")
+                )
+                ("VOLTAGE"
+                    ("value"	"RVMAX")
+                    ("pspice_param"	"VOLTAGE")
+                )
+                ("TOLERANCE"
+                    ("value"	"")
+                    ("pspice_param"	"TOLERANCE")
+                )
+                ("DIST"
+                    ("value"	"FLAT")
+                    ("pspice_param"	"DIST")
+                )
+            )
+        )
+        ("L1"
+            ("device_name"	"LDCR_0")
+            ("pspice_path"	"X_L1")
+            ("level"	"0")
+            ("model_params"
+                ("L"
+                    ("value"	"2.2u")
+                    ("pspice_param"	"L")
+                )
+                ("DCR"
+                    ("value"	"0.072")
+                    ("pspice_param"	"DCR")
+                )
+                ("IC"
+                    ("value"	"")
+                    ("pspice_param"	"IC")
+                )
+            )
+        )
+        ("C7"
+            ("device_name"	"CESR")
+            ("pspice_path"	"X_C7")
+            ("level"	"0")
+            ("model_params"
+                ("C"
+                    ("value"	"22u")
+                    ("pspice_param"	"C")
+                )
+                ("ESR"
+                    ("value"	"4m")
+                    ("pspice_param"	"ESR")
+                )
+                ("IC"
+                    ("value"	"{{Steady_State}*{Vo1}}")
+                    ("pspice_param"	"IC")
+                )
+                ("X"
+                    ("value"	"1")
+                    ("pspice_param"	"X")
+                )
+                ("BiasValue Power"
+                    ("value"	"0W")
+                    ("pspice_param"	"BiasValue Power")
+                )
+                ("ESL"
+                    ("value"	"1N")
+                    ("pspice_param"	"ESL")
+                )
+            )
+        )
+        ("C8"
+            ("device_name"	"CESR")
+            ("pspice_path"	"X_C8")
+            ("level"	"0")
+            ("model_params"
+                ("C"
+                    ("value"	"10u")
+                    ("pspice_param"	"C")
+                )
+                ("ESR"
+                    ("value"	"4m")
+                    ("pspice_param"	"ESR")
+                )
+                ("X"
+                    ("value"	"1")
+                    ("pspice_param"	"X")
+                )
+                ("IC"
+                    ("value"	"")
+                    ("pspice_param"	"IC")
+                )
+                ("BiasValue Power"
+                    ("value"	"0W")
+                    ("pspice_param"	"BiasValue Power")
+                )
+                ("ESL"
+                    ("value"	"1N")
+                    ("pspice_param"	"ESL")
+                )
+            )
+        )
+        ("U1"
+            ("device_name"	"TPS63900DSK_TRANS")
+            ("pspice_path"	"X_U1")
+            ("level"	"0")
+            ("model_params"
+                ("ICL"
+                    ("value"	"{ICL}")
+                    ("pspice_param"	"ICL")
+                )
+                ("VO1"
+                    ("value"	"{Vo1}")
+                    ("pspice_param"	"VO1")
+                )
+                ("VO2"
+                    ("value"	"{Vo2}")
+                    ("pspice_param"	"VO2")
+                )
+                ("Steady_State"
+                    ("value"	"{Steady_State}")
+                    ("pspice_param"	"Steady_State")
+                )
+                ("BiasValue Power"
+                    ("value"	"0W")
+                    ("pspice_param"	"BiasValue Power")
+                )
+                ("PackageName"
+                    ("value"	"TPS63900DSKR")
+                    ("pspice_param"	"PackageName")
+                )
+                ("IsHeterogeneous"
+                    ("value"	"False")
+                    ("pspice_param"	"IsHeterogeneous")
+                )
+                ("DevicesInView"
+                    ("value"	"1")
+                    ("pspice_param"	"DevicesInView")
+                )
+                ("DevicesInPackage"
+                    ("value"	"1")
+                    ("pspice_param"	"DevicesInPackage")
+                )
+                ("DeviceDesignator"
+                    ("value"	"A")
+                    ("pspice_param"	"DeviceDesignator")
+                )
+                ("DeviceNumbering"
+                    ("value"	"Alpha")
+                    ("pspice_param"	"DeviceNumbering")
+                )
+                ("PartNumber"
+                    ("value"	"TPS63900DSK")
+                    ("pspice_param"	"PartNumber")
+                )
+                ("Manufacturer"
+                    ("value"	"Texas Instruments")
+                    ("pspice_param"	"Manufacturer")
+                )
+                ("< Value >"
+                    ("value"	"TPS63900DSKR")
+                    ("pspice_param"	"< Value >")
+                )
+                ("OriginalSymbolOrigin"
+                    ("value"	"(-50000,70000)")
+                    ("pspice_param"	"OriginalSymbolOrigin")
+                )
+            )
+        )
+        ("R1"
+            ("device_name"	"R")
+            ("pspice_path"	"R_R1")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"250m")
+                    ("pspice_param"	"VALUE")
+                )
+                ("BiasValue Power"
+                    ("value"	"52.22W")
+                    ("pspice_param"	"BiasValue Power")
+                )
+                ("TC2"
+                    ("value"	"0")
+                    ("pspice_param"	"TC2")
+                )
+                ("TC1"
+                    ("value"	"0")
+                    ("pspice_param"	"TC1")
+                )
+                ("POWER"
+                    ("value"	"RMAX")
+                    ("pspice_param"	"POWER")
+                )
+                ("MAX_TEMP"
+                    ("value"	"RTMAX")
+                    ("pspice_param"	"MAX_TEMP")
+                )
+                ("SLOPE"
+                    ("value"	"RSMAX")
+                    ("pspice_param"	"SLOPE")
+                )
+                ("VOLTAGE"
+                    ("value"	"RVMAX")
+                    ("pspice_param"	"VOLTAGE")
+                )
+                ("TOLERANCE"
+                    ("value"	"")
+                    ("pspice_param"	"TOLERANCE")
+                )
+                ("DIST"
+                    ("value"	"FLAT")
+                    ("pspice_param"	"DIST")
+                )
+            )
+        )
+        ("PARAM"
+            ("device_name"	"Param")
+            ("pspice_path"	"")
+            ("level"	"0")
+            ("model_params"
+                ("vin"
+                    ("value"	"3.7")
+                    ("pspice_param"	"vin")
+                )
+                ("steady_state"
+                    ("value"	"0")
+                    ("pspice_param"	"steady_state")
+                )
+                ("icl"
+                    ("value"	"1")
+                    ("pspice_param"	"icl")
+                )
+                ("iload"
+                    ("value"	"100u")
+                    ("pspice_param"	"iload")
+                )
+                ("vo1"
+                    ("value"	"3.3")
+                    ("pspice_param"	"vo1")
+                )
+                ("vo2"
+                    ("value"	"3.3")
+                    ("pspice_param"	"vo2")
+                )
+            )
+        )
+    )
+)

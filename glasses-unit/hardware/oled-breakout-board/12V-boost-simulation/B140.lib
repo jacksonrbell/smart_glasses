@@ -1,0 +1,2 @@
+.MODEL DI_B140 D  ( IS=39.6u RS=50.2m BV=40.0 IBV=500u
+   + CJO=265p  M=0.333 N=1.70 TT=7.20n )
