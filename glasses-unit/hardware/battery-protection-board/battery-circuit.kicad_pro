@@ -537,7 +537,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "C:/Users/jackb/Repos/smart_glasses/glasses-unit/hardware/pcb-fab-files/",
       "specctra_dsn": "",
       "step": "battery-circuit.step",
       "vrml": ""

@@ -1,0 +1,13 @@
+Reference,Qty,Value,DNP,Exclude from BOM,Exclude from Board,Exclude from Simulation,Exclude from Position Files,Footprint,Datasheet
+"C1,C3",2,10u,,,,,${EXCLUDE_FROM_POS_FILES},Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,
+"C2,C4,C9,C10,C11",5,0.1u,,,,,${EXCLUDE_FROM_POS_FILES},Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,
+"C5,C6,C7,C8",4,220p,,,,,${EXCLUDE_FROM_POS_FILES},Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,
+C12,1,47u,,,,,${EXCLUDE_FROM_POS_FILES},glasses-kicad-footprints:WCAP-ASLI_5X5.5_DXL_,
+"FB1,FB2,FB3,FB4",4,FerriteBead_Small,,,,,${EXCLUDE_FROM_POS_FILES},Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,
+"J1,J2",2,Conn_01x02,,,,,${EXCLUDE_FROM_POS_FILES},Connector_JST:JST_PH_B2B-PH-SM4-TB_1x02-1MP_P2.00mm_Vertical,
+"J3,J4,J5",3,Conn_01x04,,,,,${EXCLUDE_FROM_POS_FILES},Connector_JST:JST_PH_B4B-PH-SM4-TB_1x04-1MP_P2.00mm_Vertical,
+"R1,R2",2,0,,,,,${EXCLUDE_FROM_POS_FILES},Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,
+R3,1,210k,,,,,${EXCLUDE_FROM_POS_FILES},Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,
+"R4,R5",2,2.2k,,,,,${EXCLUDE_FROM_POS_FILES},Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,
+U1,1,XIAO-ESP32-S3-SMD,,,,,${EXCLUDE_FROM_POS_FILES},glasses-kicad-footprints:XIAO-ESP32-S3-SMD,
+"U2,U3",2,MAX98357A,,,,,${EXCLUDE_FROM_POS_FILES},Package_DFN_QFN:TQFN-16-1EP_3x3mm_P0.5mm_EP1.23x1.23mm,https://www.analog.com/media/en/technical-documentation/data-sheets/MAX98357A-MAX98357B.pdf
